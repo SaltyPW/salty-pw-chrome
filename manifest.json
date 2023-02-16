@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Salty.PW",
+    "description": "Salty.PW password generator",
+    "version": "1.0",
+    "action": {
+	"default_popup": "popup.html",
+	"default_icon": "icon.png"
+    },
+    "content_scripts": [
+	{
+	    "js": ["scripts/content.js"],
+	    "css" : ["css/content.css"],
+	    "matches" : ["https://*/*", "file://*", "http://*/*"]
+	}
+    ],
+    "web_accessible_resources": [
+	{
+	    "resources" : ["css/content.css"],
+	    "matches" : ["https://*/*", "file://*", "http://*/*"],
+	    "use_dynamic_url" : true
+
+	}
+    ],
+    "permissions": [
+	"activeTab"
+    ]
+}
